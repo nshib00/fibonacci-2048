@@ -1,0 +1,83 @@
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+DARK_GRAY = (30, 30, 30)
+DARK_WHITE = (220, 220, 220)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+YELLOW = (255, 255, 0)
+BLUE = (0, 0, 255)
+LINEN = (250, 240, 230)
+OLD_LACE = (253, 245, 230)
+TAN = (210, 180, 140)
+LIGHT_YELLOW = 	(255, 255, 190)
+LEMON_CHIFFON = (255, 235, 165)
+BISQUE = (255, 210, 165)
+SANDY_BROWN = (244, 164, 96)
+CHOCOLATE = (210, 105, 30)
+LIGHT_PINK = (255, 182, 193)
+DEEP_PINK = (255, 20, 147)
+ORCHID = (218, 112, 214)
+MEDIUM_ORCHID = (186, 85, 211)
+SLATE_BLUE = (106, 90, 205)
+ROYAL_BLUE = (65, 105, 225)
+LIGHT_SKY_BLUE = (135, 206, 250)
+DEEP_SKY_BLUE = (0, 191, 255)
+AQUA_MARINE = (127, 255, 212)
+TURQOISE = (64, 224, 208)
+MEDIUM_SPRING_GREEN = (0, 250, 154)
+SPRING_GREEN = (20, 255, 127)
+ANTIQUE_WHITE = (250, 235, 215)
+NAVAJO_WHITE = (255, 222, 173)
+LIGHT_SALMON = (255, 160, 122)
+SALMON = (250, 128, 114)
+INDIAN_RED = (205, 92, 92)
+LIGHT_CORAL = (240, 128, 128)
+PINK = (255, 160, 200)
+BLUE_VIOLET = (138, 43, 226)
+YELLOW_GREEN = (210, 255, 156)
+PALE_YELLOW = (255, 255, 150)
+LIGHT_ORANGE = (250, 180, 75)
+CRIMSON = (220, 20, 60)
+DARK_RED = (156, 25, 25)
+BROWN = (165, 42, 42)
+MAROON = (128, 21, 21)
+DODGER_BLUE = (30, 144, 255)
+SLATE_BLUE = (106, 90, 205)
+PALE_ORANGE = (255, 215, 130)
+
+
+values_and_colors = {
+    0: WHITE,
+    1: LIGHT_YELLOW,
+    2: LEMON_CHIFFON,
+    3: BISQUE,
+    5: PALE_ORANGE,
+    8: LIGHT_SALMON,
+    13: SALMON,
+    21: LIGHT_CORAL,
+    34: LIGHT_PINK,
+    55: PINK,
+    89: ORCHID,
+    144: MEDIUM_ORCHID,
+    233: SLATE_BLUE,
+    377: DODGER_BLUE,
+    610: DEEP_SKY_BLUE,
+    987: AQUA_MARINE,
+    1597: TURQOISE,
+    2584: MEDIUM_SPRING_GREEN,
+    4181: SPRING_GREEN,
+}
+
+def get_tile_border_color(tile_value: int) -> tuple:
+    if tile_value <= 987:
+        return BLACK
+    return YELLOW
+
+def get_tile_border_width(tile_value: int) -> int:
+    if tile_value <= 144:
+        return 3
+    elif 233 <= tile_value <= 987:
+        return 4
+    elif tile_value == 4181:
+        return 7
+    return 5

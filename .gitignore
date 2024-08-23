@@ -1,0 +1,6 @@
+venv
+__pycache__
+Fibonacci 2048
+file_version_info.txt
+best_result.txt
+setup.py
